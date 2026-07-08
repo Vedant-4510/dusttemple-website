@@ -12,8 +12,8 @@ export const site = {
 export const nav: NavItem[] = [
   { label: "Practices", href: "#services" },
   { label: "About", href: "#about" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Kind words", href: "#testimonials" },
+  { label: "Questions", href: "#faq" },
 ];
 
 export const socials: SocialLink[] = [
