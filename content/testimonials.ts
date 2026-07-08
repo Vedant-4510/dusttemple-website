@@ -1,4 +1,11 @@
-export type Testimonial = { quote: string; name: string };
+export type Testimonial = {
+  quote: string;
+  name: string;
+  /** Optional short context, e.g. a city or how long they've worked with Manisha. */
+  role?: string;
+  /** Optional path to a photo in /public (e.g. "/testimonials/varsha.jpg"). Falls back to initials when absent. */
+  avatar?: string;
+};
 
 export const testimonials: Testimonial[] = [
   {
