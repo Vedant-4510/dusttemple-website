@@ -1,25 +1,19 @@
 # dusttemple-website
-Dust Temple website code
+
+Dust Temple website code.
+
+Calm, non-transactional homepage for Manisha Motarwar's spiritual practice (Dustt Temple). Built with Next.js 15 (App Router), Tailwind CSS v4, and shadcn/ui.
 
 ## Development
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+- `npm run dev` — local dev server at http://localhost:3000
+- `npm run build` — production build
+- `npm run test:e2e` — Playwright behavior + accessibility tests
 
-First, run the development server:
+## Notes
 
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-### Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Design spec: `docs/superpowers/specs/2026-07-08-dusttemple-homepage-redesign-design.md`
+- Implementation plan: `docs/superpowers/plans/2026-07-08-dusttemple-homepage.md`
+- Booking: Cal.com (`manishaa-motarwar-zwznrp/30min`), swappable in `components/booking/booking-button.tsx`
+- Deploy target: Vercel (framework auto-detected as Next.js)
+- Design direction: "Ephemeris, stilled" — warm oat paper, ocean-teal accent, antique brass; Fraunces / Hanken Grotesk / IBM Plex Mono
