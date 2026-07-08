@@ -1,5 +1,6 @@
 import { BookingButton } from "@/components/booking/booking-button";
 import { SiteHeader } from "@/components/layout/site-header";
+import { Services } from "@/components/sections/services";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <div className="mt-8">
           <BookingButton />
         </div>
+        <Services />
       </main>
     </>
   );
