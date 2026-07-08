@@ -22,13 +22,24 @@ export function SiteFooter() {
         <div className="mt-10 flex flex-col justify-between gap-8 border-t border-ink/10 pt-8 md:flex-row md:items-center">
           <nav className="flex gap-8">
             {footerNav.map((n) => (
-              <Link key={n.label} href={n.href} className="text-sm text-ink/80 hover:text-teal-deep">{n.label}</Link>
+              <Link
+                key={n.label}
+                href={n.href}
+                className="rounded-sm text-sm text-ink/80 hover:text-teal-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
+              >
+                {n.label}
+              </Link>
             ))}
           </nav>
           <div className="flex items-center gap-5">
             <span className="font-mono text-xs uppercase tracking-[0.16em] text-quiet">Follow along</span>
             {socials.map((s) => (
-              <a key={s.label} href={s.href} aria-label={s.label} className="text-ink/70 transition-colors hover:text-teal-deep">
+              <a
+                key={s.label}
+                href={s.href}
+                aria-label={s.label}
+                className="rounded-sm text-ink/70 transition-colors hover:text-teal-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
+              >
                 <SocialIcon icon={s.icon} />
               </a>
             ))}

@@ -16,7 +16,7 @@ export function Testimonials() {
           <footer className="mt-8 font-mono text-sm uppercase tracking-[0.14em] text-teal-deep">{t.name}</footer>
         </blockquote>
         <div className="mt-10 flex items-center justify-center gap-4">
-          <button type="button" aria-label="Previous testimonial" onClick={() => go(-1)} className="rounded-full border border-ink/20 p-2 text-ink transition-colors hover:border-teal">
+          <button type="button" aria-label="Previous testimonial" onClick={() => go(-1)} className="rounded-full border border-ink/20 p-2 text-ink transition-colors hover:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper-alt">
             <Arrow dir="left" />
           </button>
           <div className="flex gap-2" aria-hidden="true">
@@ -24,7 +24,7 @@ export function Testimonials() {
               <span key={k} className={`h-1.5 w-1.5 rounded-full ${k === i ? "bg-teal-deep" : "bg-ink/20"}`} />
             ))}
           </div>
-          <button type="button" aria-label="Next testimonial" onClick={() => go(1)} className="rounded-full border border-ink/20 p-2 text-ink transition-colors hover:border-teal">
+          <button type="button" aria-label="Next testimonial" onClick={() => go(1)} className="rounded-full border border-ink/20 p-2 text-ink transition-colors hover:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper-alt">
             <Arrow dir="right" />
           </button>
         </div>

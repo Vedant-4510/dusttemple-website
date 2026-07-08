@@ -21,12 +21,20 @@ export function SiteHeader() {
       className={`sticky top-0 z-40 transition-colors ${solid ? "bg-paper/90 backdrop-blur border-b border-ink/10" : "bg-transparent"}`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
-        <Link href="#top" aria-label="Dustt Temple home">
+        <Link
+          href="#top"
+          aria-label="Dustt Temple home"
+          className="rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
+        >
           <Logo className="h-10 w-auto" priority />
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {nav.map((n) => (
-            <Link key={n.href} href={n.href} className="text-sm text-ink/80 transition-colors hover:text-teal-deep">
+            <Link
+              key={n.href}
+              href={n.href}
+              className="rounded-sm text-sm text-ink/80 transition-colors hover:text-teal-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
+            >
               {n.label}
             </Link>
           ))}
@@ -34,14 +42,22 @@ export function SiteHeader() {
         </nav>
         <div className="md:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger aria-label="Open menu" className="rounded-md p-2 text-ink">
+            <SheetTrigger
+              aria-label="Open menu"
+              className="rounded-md p-2 text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
+            >
               <MenuIcon />
             </SheetTrigger>
             <SheetContent side="right" className="bg-paper p-6">
               <SheetTitle className="font-display text-2xl">Menu</SheetTitle>
               <nav className="mt-8 flex flex-col gap-6">
                 {nav.map((n) => (
-                  <Link key={n.href} href={n.href} onClick={() => setOpen(false)} className="text-lg text-ink">
+                  <Link
+                    key={n.href}
+                    href={n.href}
+                    onClick={() => setOpen(false)}
+                    className="rounded-sm text-lg text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
+                  >
                     {n.label}
                   </Link>
                 ))}
