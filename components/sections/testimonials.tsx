@@ -1,7 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { testimonials, type Testimonial } from "@/content/testimonials";
+
+const READ_MORE_THRESHOLD = 300;
 
 function initialsOf(name: string) {
   const parts = name.trim().split(/\s+/);
@@ -20,7 +22,7 @@ function Avatar({ person, size, className = "" }: { person: Testimonial; size: n
         width={size}
         height={size}
         style={dim}
-        className={`rounded-full object-cover ${className}`}
+        className={`rounded-full object-cover object-[center_22%] ${className}`}
       />
     );
   }
@@ -37,8 +39,14 @@ function Avatar({ person, size, className = "" }: { person: Testimonial; size: n
 
 export function Testimonials() {
   const [i, setI] = useState(0);
+  const [expanded, setExpanded] = useState(false);
   const t = testimonials[i];
   const go = (d: number) => setI((p) => (p + d + testimonials.length) % testimonials.length);
+  const isLong = t.quote.length > READ_MORE_THRESHOLD;
+
+  useEffect(() => {
+    setExpanded(false);
+  }, [i]);
 
   return (
     <section id="testimonials" className="border-y border-ink/10 bg-paper-alt">
@@ -50,7 +58,23 @@ export function Testimonials() {
         </span>
 
         <blockquote className="mt-2">
-          <p className="font-display text-2xl leading-snug text-ink md:text-[1.7rem]">{t.quote}</p>
+          <p
+            className={`font-display text-xl leading-relaxed text-ink md:text-2xl md:leading-relaxed ${
+              isLong && !expanded ? "line-clamp-6" : ""
+            }`}
+          >
+            {t.quote}
+          </p>
+          {isLong ? (
+            <button
+              type="button"
+              onClick={() => setExpanded((e) => !e)}
+              className="mt-5 rounded-sm font-mono text-xs uppercase tracking-[0.16em] text-teal-deep transition-colors hover:text-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper-alt"
+            >
+              {expanded ? "Show less" : "Read more"}
+            </button>
+          ) : null}
+
           <footer className="mt-9 flex items-center justify-center gap-3">
             <Avatar person={t} size={48} />
             <div className="text-left">
@@ -60,17 +84,8 @@ export function Testimonials() {
           </footer>
         </blockquote>
 
-        <div className="mt-10 flex items-center justify-center gap-4">
-          <button
-            type="button"
-            aria-label="Previous testimonial"
-            onClick={() => go(-1)}
-            className="rounded-full border border-ink/20 p-2 text-ink transition-colors hover:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper-alt"
-          >
-            <Arrow dir="left" />
-          </button>
-
-          <div className="flex items-center gap-3">
+        <div className="mt-10 flex flex-col items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-2.5">
             {testimonials.map((person, k) => (
               <button
                 key={person.name}
@@ -82,19 +97,32 @@ export function Testimonials() {
                   k === i ? "opacity-100 ring-2 ring-teal ring-offset-2 ring-offset-paper-alt" : "opacity-55 hover:opacity-90"
                 }`}
               >
-                <Avatar person={person} size={36} />
+                <Avatar person={person} size={34} />
               </button>
             ))}
           </div>
 
-          <button
-            type="button"
-            aria-label="Next testimonial"
-            onClick={() => go(1)}
-            className="rounded-full border border-ink/20 p-2 text-ink transition-colors hover:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper-alt"
-          >
-            <Arrow dir="right" />
-          </button>
+          <div className="flex items-center gap-4">
+            <button
+              type="button"
+              aria-label="Previous testimonial"
+              onClick={() => go(-1)}
+              className="rounded-full border border-ink/20 p-2 text-ink transition-colors hover:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper-alt"
+            >
+              <Arrow dir="left" />
+            </button>
+            <span className="min-w-14 text-center font-mono text-xs tabular-nums tracking-[0.14em] text-quiet">
+              {i + 1} / {testimonials.length}
+            </span>
+            <button
+              type="button"
+              aria-label="Next testimonial"
+              onClick={() => go(1)}
+              className="rounded-full border border-ink/20 p-2 text-ink transition-colors hover:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper-alt"
+            >
+              <Arrow dir="right" />
+            </button>
+          </div>
         </div>
       </div>
     </section>
