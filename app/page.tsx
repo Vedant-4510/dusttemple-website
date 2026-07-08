@@ -1,22 +1,29 @@
-import { BookingButton } from "@/components/booking/booking-button";
 import { SiteHeader } from "@/components/layout/site-header";
+import { SiteFooter } from "@/components/layout/site-footer";
+import { Hero } from "@/components/sections/hero";
+import { MeetManisha } from "@/components/sections/meet-manisha";
+import { WhoIsThisFor } from "@/components/sections/who-is-this-for";
 import { Services } from "@/components/sections/services";
+import { HowItWorks } from "@/components/sections/how-it-works";
 import { Testimonials } from "@/components/sections/testimonials";
+import { Faq } from "@/components/sections/faq";
+import { ClosingCta } from "@/components/sections/closing-cta";
 
 export default function Home() {
   return (
     <>
       <SiteHeader />
-      <main className="min-h-screen bg-paper p-16">
-        <h1 className="font-display text-6xl text-ink">Dustt Temple</h1>
-        <p className="mt-4 font-body text-quiet">Warm oat, ocean teal, antique brass.</p>
-        <p className="mt-2 font-mono text-teal-deep">11 · 22 · master numbers</p>
-        <div className="mt-8">
-          <BookingButton />
-        </div>
+      <main id="main">
+        <Hero />
+        <MeetManisha />
+        <WhoIsThisFor />
         <Services />
+        <HowItWorks />
         <Testimonials />
+        <Faq />
+        <ClosingCta />
       </main>
+      <SiteFooter />
     </>
   );
 }

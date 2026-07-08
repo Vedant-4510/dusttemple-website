@@ -3,9 +3,15 @@ import { fraunces, hanken, plexMono } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dusttemple.com"),
   title: "Dustt Temple — Find your balance, embrace your peace",
   description:
-    "Personal spiritual guidance with Manisha — numerology, astrology, mediumship, and more. Online and in person.",
+    "Personal spiritual guidance with Manisha Motarwar — numerology, astrology, mediumship, akashic readings, and more. Online and in person.",
+  openGraph: {
+    title: "Dustt Temple",
+    description: "Find your balance, embrace your peace.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
