@@ -11,7 +11,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "Shreya",
     role: "In the field of psychology",
-    // avatar: "/testimonials/shreya.jpg", // uncomment once the photo is added to public/testimonials/
+    avatar: "/testimonials/shreya.jpg",
     quote:
       "I am 24 and I work in the field of psychology. Over the past few years I tried many therapists but didn't get the results I was hoping for — until last year, when I started sessions with Manisha Aunty. I am beyond grateful for how far I have come in just this one year. She has helped me overcome so much, in both my personal and professional life, and to truly become the best version of myself — with more confidence and self-esteem. Situations that once felt overwhelming now feel manageable. I have gained so much clarity, and she has shifted my perspective on life and on dealing with people. Every session is an eye-opener, and I am thankful for all the effort she has put into my growth and journey so far.",
   },

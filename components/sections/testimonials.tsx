@@ -13,8 +13,9 @@ function initialsOf(name: string) {
 }
 
 function Avatar({ person, size, className = "" }: { person: Testimonial; size: number; className?: string }) {
+  const [failed, setFailed] = useState(false);
   const dim = { width: size, height: size };
-  if (person.avatar) {
+  if (person.avatar && !failed) {
     return (
       <Image
         src={person.avatar}
@@ -22,6 +23,7 @@ function Avatar({ person, size, className = "" }: { person: Testimonial; size: n
         width={size}
         height={size}
         style={dim}
+        onError={() => setFailed(true)}
         className={`rounded-full object-cover object-[center_22%] ${className}`}
       />
     );
