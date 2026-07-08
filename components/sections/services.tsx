@@ -40,8 +40,8 @@ export function Services() {
     <section id="services" className="border-y border-ink/10 bg-paper-alt">
       <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
         <Reveal>
-          <p className="font-mono text-xs uppercase tracking-[0.24em] text-teal-deep">What I offer</p>
-          <h2 className="mt-5 text-4xl text-ink md:text-5xl">Ways we can work together.</h2>
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-teal-deep">How I can help</p>
+          <h2 className="mt-5 text-4xl text-ink md:text-5xl">Ways we can walk together.</h2>
         </Reveal>
 
         <div className="mt-16 space-y-14">

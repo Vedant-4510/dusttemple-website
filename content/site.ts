@@ -10,7 +10,7 @@ export const site = {
 } as const;
 
 export const nav: NavItem[] = [
-  { label: "Services", href: "#services" },
+  { label: "Practices", href: "#services" },
   { label: "About", href: "#about" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "FAQ", href: "#faq" },
