@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/motion/reveal";
-import { Constellation } from "@/components/motion/constellation";
+import { PracticeChart } from "@/components/sections/practice-chart";
 import { site } from "@/content/site";
 
 export function MeetManisha() {
@@ -20,8 +20,8 @@ export function MeetManisha() {
             </p>
           </div>
         </Reveal>
-        <Reveal delay={120} className="flex justify-center">
-          <Constellation className="w-full max-w-sm" />
+        <Reveal delay={120}>
+          <PracticeChart />
         </Reveal>
       </div>
     </section>

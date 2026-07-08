@@ -169,3 +169,20 @@
 @media (scripting: none) {
   [data-reveal] { opacity: 1 !important; transform: none !important; }
 }
+
+@keyframes chart-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes chart-twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+.chart-star {
+  animation: chart-twinkle 4s ease-in-out infinite;
+}
+.chart-star:nth-of-type(3n) {
+  animation-delay: 1.6s;
+}
