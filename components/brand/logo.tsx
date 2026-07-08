@@ -9,6 +9,7 @@ export function Logo({ className = "", priority = false }: { className?: string;
       width={636}
       height={377}
       priority={priority}
+      sizes="160px"
       className={className}
     />
   );

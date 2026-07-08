@@ -14,13 +14,15 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-ink/10 bg-paper">
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8">
-        <div className="flex flex-col justify-between gap-8 md:flex-row md:items-center">
-          <Logo className="h-12 w-auto" />
-          <BookingButton />
+        <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-sm">
+            <Logo className="h-14 w-auto" />
+            <p className="mt-6 font-display text-2xl text-ink">{site.tagline}</p>
+          </div>
+          <BookingButton className="self-start md:self-auto" />
         </div>
-        <p className="mt-10 max-w-md font-display text-2xl text-ink">{site.tagline}</p>
-        <div className="mt-10 flex flex-col justify-between gap-8 border-t border-ink/10 pt-8 md:flex-row md:items-center">
-          <nav className="flex gap-8">
+        <div className="mt-12 flex flex-col gap-6 border-t border-ink/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <nav className="flex flex-wrap gap-x-8 gap-y-3">
             {footerNav.map((n) => (
               <Link
                 key={n.label}
