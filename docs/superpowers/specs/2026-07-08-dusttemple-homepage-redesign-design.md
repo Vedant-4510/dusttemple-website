@@ -65,13 +65,16 @@ motion, and copy.
 | `paper`     | `#EFEBE0` | Primary ground — warm oat, airy                  |
 | `paper-alt` | `#E6E1D3` | Quiet section banding                            |
 | `ink`       | `#1E232B` | Primary text — iron-gall blue-black (not pure black) |
-| `pine`      | `#37564F` | Primary accent (the logo teal, calmed)           |
+| `teal`      | `#2E93AC` | Primary accent — sampled from the logo (soft ocean teal) |
+| `teal-deep` | `#1F6E82` | CTAs, links, teal text on light grounds (legibility) |
 | `brass`     | `#A98842` | Numerals, stars, fine detail — used sparingly    |
 | `muted`     | `#797262` | Secondary text                                   |
 | `sage`      | `#9DAAA0` | Soft supporting tint                             |
 
-Neutrals are warm-biased toward the accent, not pure grey. Final tokens live in the Tailwind theme
-and as CSS variables; shadcn components are themed to these values.
+The warm-oat ground against the cool ocean-teal accent (with antique brass as fine detail) is a
+deliberate warm/cool tension — distinctive and calm, and far from the generic cream-and-terracotta
+wellness look. Neutrals are warm-biased, not pure grey. Final tokens live in the Tailwind theme and
+as CSS variables; shadcn components are themed to these values.
 
 ### 4.2 Typography
 
@@ -100,7 +103,7 @@ Deliberate and calm — motion serves the experience, never decorates it.
 - Generous whitespace; one focal point per section.
 - Max content width ~1080–1120px.
 - Exactly one accent action per view — the recurring CTA is the calmest-loudest element.
-- Hairline pine dividers; brass as punctuation, never wallpaper.
+- Hairline teal dividers; brass as punctuation, never wallpaper.
 - Recurring "ephemeris" texture — a sparse mono coordinate/numeral motif — as a quiet signature.
 
 ---
@@ -111,7 +114,7 @@ The prototype's biggest visual failure was inconsistent imagery (cream mandalas 
 photo + an AI temple render + stock tarot + a neon chakra graphic). The redesign unifies imagery
 into **one curated visual language**, on-palette and matched to intent/messaging:
 
-- Celestial and astronomical line art (constellations, charts, orbits) in pine/brass on paper.
+- Celestial and astronomical line art (constellations, charts, orbits) in teal/brass on paper.
 - Sacred geometry and numerology motifs, quiet and consistent.
 - Meditative, serene scenes selected/treated to the palette (warm, soft, non-clashing).
 - Consistent treatment (duotone / warm wash) so every image reads as one family.
@@ -191,12 +194,17 @@ then what she offers, then how it works, then proof, then answers, then the invi
 
 ---
 
-## 11. Open items / assets needed from client
+## 11. Assets & open items
 
-- **Logo source file** (vector / high-res) — to derive the exact mark and confirm palette.
-- **Booking link** — Calendly or Cal.com URL/account.
+**Received:**
+- **Logo** — `assets/brand/dustt-temple-logo.avif` (+ `.png`). Accent teal `#2E93AC` sampled from it.
+- **Booking link** — Cal.com: `https://cal.com/manishaa-motarwar-zwznrp/30min`.
+- **Practitioner name** — Manisha Motarwar.
+- **Deploy target** — Vercel (confirmed).
+
+**Still needed before / during build:**
 - **Final testimonial text** — confirm we may use the named quotes from the prototype.
 - **Any real, non-numeric trust signals** we may state (credentials, training, lineage) — nothing
   fabricated.
 - Curated/approved imagery, or approval to source on-palette imagery to the strategy in §5.
-- Confirm **deploy target** (Vercel assumed) and domain.
+- Domain (for Vercel).
