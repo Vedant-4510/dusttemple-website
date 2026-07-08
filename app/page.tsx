@@ -1,6 +1,7 @@
 import { BookingButton } from "@/components/booking/booking-button";
 import { SiteHeader } from "@/components/layout/site-header";
 import { Services } from "@/components/sections/services";
+import { Testimonials } from "@/components/sections/testimonials";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
           <BookingButton />
         </div>
         <Services />
+        <Testimonials />
       </main>
     </>
   );
