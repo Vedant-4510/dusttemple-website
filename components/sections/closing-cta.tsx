@@ -9,7 +9,7 @@ export function ClosingCta() {
         <Reveal>
           <h2 className="text-4xl text-paper md:text-6xl">{site.tagline}</h2>
           <p className="mx-auto mt-6 max-w-md text-lg text-paper/70">
-            Whenever you are ready, the door is open. There is no cost to simply talk.
+            Whenever you are ready, the door is open. A first conversation asks nothing of you.
           </p>
           <div className="mt-10 flex justify-center">
             <BookingButton className="bg-brass text-ink hover:bg-brass/90" />

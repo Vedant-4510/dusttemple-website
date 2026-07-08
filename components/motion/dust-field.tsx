@@ -47,7 +47,7 @@ export function DustField({ className = "" }: { className?: string }) {
     let t: ReturnType<typeof setTimeout>;
     const onResize = () => { clearTimeout(t); t = setTimeout(size, 150); };
     window.addEventListener("resize", onResize);
-    return () => { cancelAnimationFrame(raf); window.removeEventListener("resize", onResize); };
+    return () => { cancelAnimationFrame(raf); window.removeEventListener("resize", onResize); clearTimeout(t); };
   }, []);
 
   return <canvas ref={canvasRef} aria-hidden="true" className={className} />;

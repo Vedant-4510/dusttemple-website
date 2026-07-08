@@ -139,6 +139,7 @@
   }
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
   body {
     line-height: 1.75;
@@ -163,4 +164,8 @@
       transition-duration: 0.001ms !important;
     }
   }
+}
+
+@media (scripting: none) {
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
 }

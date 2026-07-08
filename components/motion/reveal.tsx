@@ -32,6 +32,7 @@ export function Reveal({
   return (
     <Comp
       ref={ref as React.Ref<HTMLElement>}
+      data-reveal
       className={className}
       style={{
         opacity: shown ? 1 : 0,
