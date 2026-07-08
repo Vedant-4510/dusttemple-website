@@ -238,7 +238,7 @@ Replace the contents of `app/globals.css` with:
   --color-teal: #2e93ac;
   --color-teal-deep: #1f6e82;
   --color-brass: #a98842;
-  --color-muted: #797262;
+  --color-quiet: #797262;
   --color-sage: #9daaa0;
 
   --font-display: var(--font-fraunces);
@@ -295,7 +295,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-paper p-16">
       <h1 className="font-display text-6xl text-ink">Dustt Temple</h1>
-      <p className="mt-4 font-body text-muted">Warm oat, ocean teal, antique brass.</p>
+      <p className="mt-4 font-body text-quiet">Warm oat, ocean teal, antique brass.</p>
       <p className="mt-2 font-mono text-teal-deep">11 · 22 · master numbers</p>
     </main>
   );
@@ -990,12 +990,12 @@ export function Hero() {
         <h1 className="mt-6 max-w-4xl text-5xl text-ink md:text-7xl">
           We come from dust. In between, we build a temple.
         </h1>
-        <p className="mt-6 max-w-xl text-lg text-muted">
+        <p className="mt-6 max-w-xl text-lg text-quiet">
           Not of stone — of thought, of choice, of the quiet work of becoming. Sit with me, and let us tend to yours.
         </p>
         <div className="mt-9 flex flex-wrap items-center gap-5">
           <BookingButton />
-          <span className="font-mono text-xs uppercase tracking-[0.16em] text-muted">Online &amp; in person</span>
+          <span className="font-mono text-xs uppercase tracking-[0.16em] text-quiet">Online &amp; in person</span>
         </div>
       </div>
     </section>
@@ -1036,7 +1036,7 @@ export function MeetManisha() {
         <Reveal>
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-teal-deep">The guide</p>
           <h2 className="mt-5 text-4xl text-ink md:text-5xl">A soft place to begin.</h2>
-          <div className="mt-6 space-y-4 text-lg text-muted">
+          <div className="mt-6 space-y-4 text-lg text-quiet">
             <p>
               I am {site.practitioner}. For years, people have come to me not for answers so much as for company —
               someone patient to sit with the grief, the questions, the turning points.
@@ -1092,7 +1092,7 @@ export function WhoIsThisFor() {
           <Reveal key={o.title} delay={i * 80}>
             <div className="border-t border-brass/40 pt-5">
               <h3 className="text-xl text-ink">{o.title}</h3>
-              <p className="mt-3 text-muted">{o.body}</p>
+              <p className="mt-3 text-quiet">{o.body}</p>
             </div>
           </Reveal>
         ))}
@@ -1156,7 +1156,7 @@ export function Services() {
               <div className="grid gap-8 md:grid-cols-[220px_1fr]">
                 <div>
                   <h3 className="font-display text-2xl text-teal-deep">{grp.group}</h3>
-                  <p className="mt-2 text-sm text-muted">{grp.caption}</p>
+                  <p className="mt-2 text-sm text-quiet">{grp.caption}</p>
                 </div>
                 <Accordion type="single" collapsible className="w-full">
                   {grp.services.map((s) => (
@@ -1165,7 +1165,7 @@ export function Services() {
                         <span className="text-lg text-ink">{s.name}</span>
                       </AccordionTrigger>
                       <AccordionContent>
-                        <p className="text-muted">{s.blurb}</p>
+                        <p className="text-quiet">{s.blurb}</p>
                         <ul className="mt-4 grid gap-2 sm:grid-cols-2">
                           {s.offerings.map((o) => (
                             <li key={o} className="flex items-start gap-2 text-sm text-ink/80">
@@ -1232,7 +1232,7 @@ export function HowItWorks() {
             <div>
               <span className="font-mono text-sm text-brass">{s.k}</span>
               <h3 className="mt-3 text-2xl text-ink">{s.title}</h3>
-              <p className="mt-3 text-muted">{s.body}</p>
+              <p className="mt-3 text-quiet">{s.body}</p>
             </div>
           </Reveal>
         ))}
@@ -1362,7 +1362,7 @@ export function Faq() {
         {faqs.map((f) => (
           <AccordionItem key={f.q} value={f.q} className="border-ink/10">
             <AccordionTrigger className="text-left text-lg text-ink">{f.q}</AccordionTrigger>
-            <AccordionContent className="text-muted">{f.a}</AccordionContent>
+            <AccordionContent className="text-quiet">{f.a}</AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
@@ -1457,7 +1457,7 @@ export function SiteFooter() {
             ))}
           </nav>
           <div className="flex items-center gap-5">
-            <span className="font-mono text-xs uppercase tracking-[0.16em] text-muted">Follow along</span>
+            <span className="font-mono text-xs uppercase tracking-[0.16em] text-quiet">Follow along</span>
             {socials.map((s) => (
               <a key={s.label} href={s.href} aria-label={s.label} className="text-ink/70 transition-colors hover:text-teal-deep">
                 <SocialIcon icon={s.icon} />
@@ -1465,7 +1465,7 @@ export function SiteFooter() {
             ))}
           </div>
         </div>
-        <p className="mt-10 text-xs text-muted">© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
+        <p className="mt-10 text-xs text-quiet">© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
       </div>
     </footer>
   );
