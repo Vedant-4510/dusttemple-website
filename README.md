@@ -2,7 +2,7 @@
 
 Dust Temple website code.
 
-Calm, non-transactional homepage for Manisha Motarwar's spiritual practice (Dustt Temple). Built with Next.js 15 (App Router), Tailwind CSS v4, and shadcn/ui.
+Calm, non-transactional homepage for Mmanisha Sandip M's spiritual practice (Dustt Temple). Built with Next.js 15 (App Router), Tailwind CSS v4, and shadcn/ui.
 
 ## Development
 

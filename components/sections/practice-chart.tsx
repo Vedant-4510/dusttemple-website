@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { DustField } from "@/components/motion/dust-field";
+import { site } from "@/content/site";
 
 type Star = { label: string; blurb: string; x: number; y: number };
 
@@ -150,7 +151,7 @@ export function PracticeChart() {
         ) : null}
       </div>
       <p className="mt-5 text-center font-mono text-xs uppercase tracking-[0.22em] text-quiet">
-        Manisha Motarwar · seven ways in
+        {site.practitioner} · seven ways in
       </p>
     </div>
   );

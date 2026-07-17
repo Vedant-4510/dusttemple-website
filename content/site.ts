@@ -6,7 +6,7 @@ export const site = {
   tagline: "Find your balance, embrace your peace.",
   calLink: "manishaa-motarwar-zwznrp/30min",
   ctaLabel: "Begin a conversation",
-  practitioner: "Manisha Motarwar",
+  practitioner: "Mmanisha Sandip M",
 } as const;
 
 export const nav: NavItem[] = [
@@ -18,6 +18,6 @@ export const nav: NavItem[] = [
 
 export const socials: SocialLink[] = [
   { label: "Facebook", href: "#", icon: "facebook" },
-  { label: "Instagram", href: "#", icon: "instagram" },
+  { label: "Instagram", href: "https://www.instagram.com/dustttemple?igsh=MW12Zm14Y3duZHA5eg==", icon: "instagram" },
   { label: "YouTube", href: "#", icon: "youtube" },
 ];
