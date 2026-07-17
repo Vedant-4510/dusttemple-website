@@ -62,6 +62,6 @@ export const testimonials: Testimonial[] = [
   {
     quote:
       "I have known Manisha for a few years now. She is patient, kind, sensitive, and has clarity of thought. Her ability to connect the dots and see what lies ahead has been spot on. I highly recommend her to anyone seeking peace and harmony.",
-    name: "Vikaas Sachdev",
+    name: "Vikaas M Sachdeva",
   },
 ];
