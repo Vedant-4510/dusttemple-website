@@ -16,7 +16,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8">
         <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
           <div className="max-w-sm">
-            <Logo className="h-14 w-auto" />
+            <Logo className="h-12 w-auto" textClassName="text-xl" />
             <p className="mt-6 font-display text-2xl text-ink">{site.tagline}</p>
           </div>
           <BookingButton className="self-start md:self-auto" />

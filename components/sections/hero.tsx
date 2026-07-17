@@ -15,7 +15,9 @@ export function Hero() {
           Numerology · Astrology · Mediumship
         </p>
         <h1 className="mt-6 max-w-4xl text-5xl text-ink md:text-7xl">
-          We come from dust. In between, we build a temple.
+          We come from dust.
+          <br />
+          In between, we build a temple.
         </h1>
         <p className="mt-6 max-w-xl text-lg text-quiet">
           Not of stone — of thought, of choice, of the quiet work of becoming. Sit with me, and let us tend to yours.

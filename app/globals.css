@@ -11,7 +11,7 @@
   --color-teal: #2e93ac;
   --color-teal-deep: #1f6e82;
   --color-brass: #a98842;
-  --color-quiet: #797262;
+  --color-quiet: #605945;
   --color-sage: #9daaa0;
   --font-display: var(--font-fraunces);
   --font-body: var(--font-hanken);
@@ -70,7 +70,7 @@
   --secondary: #e6e1d3;
   --secondary-foreground: #1e232b;
   --muted: #e6e1d3;
-  --muted-foreground: #797262;
+  --muted-foreground: #605945;
   --accent: #e6e1d3;
   --accent-foreground: #1e232b;
   --destructive: oklch(0.577 0.245 27.325);

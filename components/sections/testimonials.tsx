@@ -95,11 +95,11 @@ export function Testimonials() {
                 aria-label={`Show testimonial from ${person.name}`}
                 aria-pressed={k === i}
                 onClick={() => setI(k)}
-                className={`rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper-alt ${
+                className={`rounded-full p-1 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper-alt ${
                   k === i ? "opacity-100 ring-2 ring-teal ring-offset-2 ring-offset-paper-alt" : "opacity-55 hover:opacity-90"
                 }`}
               >
-                <Avatar person={person} size={34} />
+                <Avatar person={person} size={38} />
               </button>
             ))}
           </div>
@@ -109,7 +109,7 @@ export function Testimonials() {
               type="button"
               aria-label="Previous testimonial"
               onClick={() => go(-1)}
-              className="rounded-full border border-ink/20 p-2 text-ink transition-colors hover:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper-alt"
+              className="rounded-full border border-ink/20 p-3 text-ink transition-colors hover:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper-alt"
             >
               <Arrow dir="left" />
             </button>
@@ -120,7 +120,7 @@ export function Testimonials() {
               type="button"
               aria-label="Next testimonial"
               onClick={() => go(1)}
-              className="rounded-full border border-ink/20 p-2 text-ink transition-colors hover:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper-alt"
+              className="rounded-full border border-ink/20 p-3 text-ink transition-colors hover:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper-alt"
             >
               <Arrow dir="right" />
             </button>
@@ -134,8 +134,8 @@ export function Testimonials() {
 function Arrow({ dir }: { dir: "left" | "right" }) {
   return (
     <svg
-      width="18"
-      height="18"
+      width="20"
+      height="20"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { Logo } from "@/components/brand/logo";
@@ -9,6 +9,7 @@ import { nav } from "@/content/site";
 export function SiteHeader() {
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
+  const menuTitleRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 24);
     onScroll();
@@ -26,7 +27,7 @@ export function SiteHeader() {
           aria-label="Dustt Temple home"
           className="rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
         >
-          <Logo className="h-10 w-auto" priority />
+          <Logo className="h-9 w-auto" textClassName="text-base" priority />
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {nav.map((n) => (
@@ -48,8 +49,10 @@ export function SiteHeader() {
             >
               <MenuIcon />
             </SheetTrigger>
-            <SheetContent side="right" className="bg-paper p-6">
-              <SheetTitle className="font-display text-2xl">Menu</SheetTitle>
+            <SheetContent side="right" className="bg-paper p-6" initialFocus={menuTitleRef}>
+              <SheetTitle ref={menuTitleRef} tabIndex={-1} className="font-display text-2xl outline-none">
+                Menu
+              </SheetTitle>
               <nav className="mt-8 flex flex-col gap-6">
                 {nav.map((n) => (
                   <Link

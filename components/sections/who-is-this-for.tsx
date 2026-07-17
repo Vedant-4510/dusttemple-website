@@ -51,16 +51,16 @@ export function WhoIsThisFor() {
         {outcomes.map((o, i) => (
           <Reveal key={o.title} delay={i * 80}>
             <div className="group h-full rounded-2xl p-5 transition-colors duration-300 hover:bg-paper-alt/50">
-              <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full border border-brass/25 text-brass transition-colors duration-300 group-hover:border-brass/50 group-hover:bg-brass/[0.06]">
+              <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full border border-brass/35 text-brass transition-colors duration-300 group-hover:border-brass/60 group-hover:bg-brass/[0.08]">
                 <svg
                   viewBox="0 0 32 32"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="1.4"
+                  strokeWidth="1.6"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   aria-hidden="true"
-                  className="h-6 w-6"
+                  className="h-7 w-7"
                 >
                   {GLYPHS[o.title]}
                 </svg>

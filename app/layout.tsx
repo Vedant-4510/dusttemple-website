@@ -11,6 +11,13 @@ export const metadata: Metadata = {
     title: "Dustt Temple",
     description: "Find your balance, embrace your peace.",
     type: "website",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Dustt Temple — Find your balance, embrace your peace." }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dustt Temple",
+    description: "Find your balance, embrace your peace.",
+    images: ["/og-image.jpg"],
   },
 };
 

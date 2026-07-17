@@ -82,7 +82,7 @@ export function Services() {
                             <span className="block text-lg text-ink transition-colors duration-300 group-hover:text-teal-deep">
                               {s.name}
                             </span>
-                            <span className="mt-1.5 block text-sm leading-relaxed text-quiet">{s.blurb}</span>
+                            <span className="mt-1.5 block font-body text-sm leading-relaxed text-quiet">{s.blurb}</span>
                           </span>
                         </AccordionTrigger>
                         <AccordionContent className="pb-5 pl-9">
