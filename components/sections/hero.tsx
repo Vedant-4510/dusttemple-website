@@ -54,7 +54,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="top" ref={sectionRef} className="relative overflow-hidden">
+    <section id="top" ref={sectionRef} className="relative min-h-[100svh] overflow-hidden">
       <div
         ref={dustWrapRef}
         className="pointer-events-none absolute inset-0 h-full w-full transition-opacity duration-[1400ms] ease-out"
