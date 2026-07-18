@@ -4,7 +4,7 @@ export type SocialLink = { label: string; href: string; icon: "facebook" | "inst
 export const site = {
   name: "Dustt Temple",
   tagline: "Find your balance, embrace your peace.",
-  calLink: "manishaa-motarwar-zwznrp/30min",
+  bookingUrl: "https://calendly.com/vedant-scoutflo/new-meeting",
   ctaLabel: "Begin a conversation",
   practitioner: "Mmanisha Sandip M",
 } as const;

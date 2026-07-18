@@ -14,6 +14,6 @@ Calm, non-transactional homepage for Mmanisha Sandip M's spiritual practice (Dus
 
 - Design spec: `docs/superpowers/specs/2026-07-08-dusttemple-homepage-redesign-design.md`
 - Implementation plan: `docs/superpowers/plans/2026-07-08-dusttemple-homepage.md`
-- Booking: Cal.com (`manishaa-motarwar-zwznrp/30min`), swappable in `components/booking/booking-button.tsx`
+- Booking: Calendly (`https://calendly.com/vedant-scoutflo/new-meeting`), swappable in `components/booking/booking-button.tsx`
 - Deploy target: Vercel (framework auto-detected as Next.js)
 - Design direction: "Ephemeris, stilled" — warm oat paper, ocean-teal accent, antique brass; Fraunces / Hanken Grotesk / IBM Plex Mono
