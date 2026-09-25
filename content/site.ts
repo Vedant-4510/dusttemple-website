@@ -10,10 +10,11 @@ export const site = {
 } as const;
 
 export const nav: NavItem[] = [
-  { label: "Practices", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Kind words", href: "#testimonials" },
-  { label: "Questions", href: "#faq" },
+  { label: "Practices", href: "/#services" },
+  { label: "About", href: "/#about" },
+  { label: "Kind words", href: "/#testimonials" },
+  { label: "Questions", href: "/#faq" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export const socials: SocialLink[] = [
