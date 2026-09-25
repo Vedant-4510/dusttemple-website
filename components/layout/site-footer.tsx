@@ -5,9 +5,9 @@ import { BookingButton } from "@/components/booking/booking-button";
 import { site, socials } from "@/content/site";
 
 const footerNav = [
-  { label: "Home", href: "#top" },
-  { label: "Blog", href: "#" },
-  { label: "About", href: "#about" },
+  { label: "Home", href: "/#top" },
+  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/#about" },
 ];
 
 export function SiteFooter() {
