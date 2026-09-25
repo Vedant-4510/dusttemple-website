@@ -64,4 +64,10 @@ export const testimonials: Testimonial[] = [
       "I have known Manisha for a few years now. She is patient, kind, sensitive, and has clarity of thought. Her ability to connect the dots and see what lies ahead has been spot on. I highly recommend her to anyone seeking peace and harmony.",
     name: "Vikaas M Sachdeva",
   },
+  {
+    name: "Sharmilla Dass",
+    role: "New Delhi",
+    quote:
+      "I am truly indebted to Manisha ji to show me the light when I most needed it. Her way to channel is extremely sensitive and gentle though perfectly accurate. She brings in hope when it seems to be lost.",
+  },
 ];
