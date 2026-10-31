@@ -9,6 +9,7 @@ export type PostMeta = {
   title: string;
   date: string;
   excerpt: string;
+  image?: string;
 };
 
 function readPostFile(filename: string): { meta: PostMeta; content: string } {
@@ -21,6 +22,7 @@ function readPostFile(filename: string): { meta: PostMeta; content: string } {
       title: data.title as string,
       date: data.date as string,
       excerpt: data.excerpt as string,
+      image: data.image as string | undefined,
     },
     content,
   };
