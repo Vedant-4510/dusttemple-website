@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -50,6 +51,16 @@ export default async function BlogPostPage({
             <p className="mt-4 font-mono text-xs uppercase tracking-[0.16em] text-quiet">
               {formatDate(post.meta.date)}
             </p>
+
+            {post.meta.image ? (
+              <Image
+                src={post.meta.image}
+                alt={post.meta.title}
+                width={720}
+                height={953}
+                className="mt-10 w-full rounded-2xl border border-ink/10 object-cover"
+              />
+            ) : null}
 
             <div className="mt-10">
               <MDXRemote source={post.content} components={mdxComponents} />
